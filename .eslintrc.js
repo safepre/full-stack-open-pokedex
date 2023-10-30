@@ -10,11 +10,10 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    sourcetype: module,
     ecmaVersion: 2018,
   },
   rules: {
-    indent: ['error', 2],
+    indent: ['error', 'tab'],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
