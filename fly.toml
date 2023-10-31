@@ -1,0 +1,24 @@
+# fly.toml app configuration file generated for ci-cd-pokedex on 2023-10-31T11:47:28-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "ci-cd-pokedex"
+primary_region = "lax"
+
+[deploy]
+  release_command = "npm run build"
+
+[processes]
+  app = "node app.js"
+
+[build.args]
+    NODE_VERSION = "16.20.2"
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
