@@ -5,7 +5,8 @@
 
 app = "ci-cd-pokedex"
 primary_region = "lax"
-
+[env]
+PORT = "5000"
 [experimental]
   auto_rollback = true
 [deploy]
