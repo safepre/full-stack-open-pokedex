@@ -26,7 +26,7 @@ primary_region = "lax"
   processes = ["app"]
 
 [[services]]
-internal_port = 8080
+internal_port = 5000
 protocol = "tcp"
 auto_stop_machines = true
 auto_start_machines = true
@@ -74,7 +74,7 @@ restart_limit = 0
 timeout = "2s"
 
 [[services.http_service]]
-internal_port = 8080
+internal_port = 5000
 force_https = true
 auto_stop_machines = true
 auto_start_machines = true
